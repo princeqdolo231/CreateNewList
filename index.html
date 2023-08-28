@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Form</title>
+    </head>
+    <style>
+        header {
+            text-align: center;
+            font-size: 1em;
+            font-family: cursive;
+            text-decoration: underline;
+        }
+
+        form {
+            text-align: center;
+            box-sizing: border-box;
+            align-content: baseline;
+            padding: 12px;
+        }
+
+        input {
+            padding: 12px 40px;
+            margin: 8px 20px;
+            box-sizing: border-box;
+            font-size: 1.5em;
+        }
+
+        #button {
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: lightblue;
+            color: black;
+            font-size: 1.1em;
+            padding: 12px 40px;
+            margin: 8px 20px;
+        }
+
+        section {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            width: 100%;
+            padding: 12px;
+        }
+
+        li {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 2em;
+        }
+    </style>
+    <body>
+        <header>
+            <h1>Welcome To My List App</h1>
+        </header>
+        <form>
+            <input id="addList" placeholder="Add Items Here" type="text">
+            <button id="button" onclick="addItems()">Submit</button> 
+        </form>
+        <section>
+            <ul id="listAdd">
+                <li></li>
+            </ul>
+        </section>
+
+        <script type="text/javascript">
+          function addItems() {
+                // 1. Get the input from User
+                let userInput = document.getElementById("addList")
+
+                // 2 Get (ul) elements
+                let itemList = document.getElementById("listAdd")
+
+                // 3. Create list elements
+                let newList = document.createElement("li")
+
+                // 4. Set frute name to my list elements
+                newList.innerText = userInput
+
+                //5. Add item to ul
+                itemList.appendChild(newList)
+            }
+        </script>
+    </body>
+</html>
